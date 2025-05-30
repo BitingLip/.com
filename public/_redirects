@@ -1,0 +1,9 @@
+# Netlify redirects file
+# Redirect .com and .org domains to .co
+https://www.bitinglip.com/* https://bitinglip.co/:splat 301!
+https://bitinglip.com/* https://bitinglip.co/:splat 301!
+https://www.bitinglip.org/* https://bitinglip.co/:splat 301!
+https://bitinglip.org/* https://bitinglip.co/:splat 301!
+
+# SPA fallback for client-side routing
+/*    /index.html   200

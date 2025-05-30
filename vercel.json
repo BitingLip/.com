@@ -1,0 +1,31 @@
+# Vercel configuration for www. to non-www redirect
+{
+  "redirects": [
+    {
+      "source": "https://www.bitinglip.com/(.*)",
+      "destination": "https://bitinglip.co/$1",
+      "permanent": true
+    },
+    {
+      "source": "https://bitinglip.com/(.*)",
+      "destination": "https://bitinglip.co/$1",
+      "permanent": true
+    },
+    {
+      "source": "https://www.bitinglip.org/(.*)",
+      "destination": "https://bitinglip.co/$1",
+      "permanent": true
+    },
+    {
+      "source": "https://bitinglip.org/(.*)",
+      "destination": "https://bitinglip.co/$1",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

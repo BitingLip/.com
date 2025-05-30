@@ -1,0 +1,14 @@
+# Apache .htaccess file for domain redirects to .co
+RewriteEngine On
+
+# Redirect .com and .org domains (with or without www.) to .co
+RewriteCond %{HTTP_HOST} ^(www\.)?bitinglip\.com [NC]
+RewriteRule ^(.*)$ https://bitinglip.co/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(www\.)?bitinglip\.org [NC]
+RewriteRule ^(.*)$ https://bitinglip.co/$1 [R=301,L]
+
+# Handle client-side routing (SPA fallback)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
